@@ -4,7 +4,7 @@ FROM eclipse-temurin:21-jre-alpine
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 
 # Copy compiled classes (from ./gradlew build)
-COPY build/classes/java/main/ /app/classes/
+COPY lib/build/classes/java/main/ /app/classes/
 
 # Switch to non-root
 USER appuser
